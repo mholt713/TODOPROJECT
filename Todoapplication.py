@@ -28,26 +28,27 @@ def delete_task():
             print("Task does not exist")
 
 def main():
-    try:
         while True:
-            print("\nHello, welcome to your to do list.")
-            print("""What would you like to do?
-    1. ADD TASKS    2. VIEW TASKS
-    3. DELETE TASKS 4. QUIT APP""")
-            choice = int(input("Please select an option on the screen: "))
-            if choice == 1:
-                add_task()
-            elif choice == 2:
-                view_tasks()
-            elif choice == 3:
-                delete_task()
-            elif choice == 4:
-                print("Thank you for using YOUR TO DO LIST")
-                break        
-            else:
-                print("That is not an option. Please try again.")
-    except ValueError: 
-        print("You must choose an option on the screen.")  
-              
+            try:
+                print("\nHello, welcome to your to do list.")
+                print("""What would you like to do?
+        1. ADD TASKS    2. VIEW TASKS
+        3. DELETE TASKS 4. QUIT APP""")
+                choice = int(input("Please select an option on the screen: "))
+                if choice == 1:
+                    add_task()
+                elif choice == 2:
+                    view_tasks()
+                elif choice == 3:
+                    delete_task()
+                elif choice == 4:
+                    print("Thank you for using YOUR TO DO LIST")
+                    break        
+                else: 
+                    print("That is not an option. Please try again.")
+            except ValueError:
+                print("Please enter one of the numerical options present.")
+            
+
 if __name__ == "__main__":
     main()
